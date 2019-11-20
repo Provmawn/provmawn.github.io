@@ -7,7 +7,7 @@
     <header role="banner">
         <nav role="navigation">
             <ul>
-                <li><a href="#">
+                <li><a href="#" title="Portfolio"><img src="#"></a></li>
                 <li><a href="#" title="About">About</a></li>
                 <li><a href="#" title="Projects">Projects</a></li>
                 <li><a href="#" title="Resume" download="provmawn-resume">Resume</a></li>
