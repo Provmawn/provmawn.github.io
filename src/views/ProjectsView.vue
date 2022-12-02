@@ -12,7 +12,7 @@
                         <p class="non-essential">
                             <div v-if="project.demo">
                                 <span class="section non-essential">demo link: </span>
-                                <a class="non-essential" :href="project.demo">here</a>
+                                <a class="non-essential" target="_blank" :href="project.demo">here</a>
                             </div>
                         </p>
                         <a class="non-essential" :href="project.code">source-code</a>
