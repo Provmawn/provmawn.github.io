@@ -15,7 +15,7 @@
                                 <a class="non-essential" target="_blank" :href="project.demo">here</a>
                             </div>
                         </p>
-                        <a class="non-essential" :href="project.code">source-code</a>
+                        <a v-if="project.code.length > 0" class="non-essential" :href="project.code">source-code</a>
                         <img class="img-fluid mt-3" :src="project.image"/>
                     </div>
                 </div>
@@ -37,6 +37,7 @@ export default {
                 { id: 2, name: 'Minesweeper Replica', description:'Minesweeper recreated from in java.', code: 'https://github.com/Provmawn/java_minesweeper', demo: '', image: ''},
                 { id: 3, name: 'Gun Man\'s Nightmare', description:'2D web game made with javascript and canvas.', code: 'https://github.com/Provmawn/gunmans-nightmare', demo: 'https://www.youtube.com/watch?v=9pqFwmkh7r8', image: require('@/assets/gunmans-nightmare.png')},
                 { id: 4, name: 'Asteroids', description:'2D asteroids game written in C++ with SDL', code: 'https://github.com/Provmawn/asteroids', demo: '', image: ''},
+                { id: 5, name: 'full-type', description:'typing app that uses 100% of your keyboard', code: '', demo: 'http://full-type.com', image: ''},
             ]
         }
     }
