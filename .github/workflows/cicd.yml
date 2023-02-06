@@ -10,6 +10,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Git
+        run: |
+          git --version
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git status
+          git tag
+          git describe
       - name: Deploy
         run: |
           git add dist && git commit -m "Initial dist subtree commit"
