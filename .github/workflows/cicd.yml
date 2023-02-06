@@ -10,15 +10,11 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Git
+      - name: Setup Git
         run: |
           git --version
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.name "provmawn"
+          git config user.email "${{ secrets.TOKEN_FOR_GIT }}"
           git status
           git tag
           git describe
-      - name: Deploy
-        run: |
-          git add dist && git commit -m "Initial dist subtree commit"
-          git subtree push --prefix dist origin gh-pages
