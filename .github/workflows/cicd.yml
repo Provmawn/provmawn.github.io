@@ -16,5 +16,8 @@ jobs:
           git config user.name "provmawn"
           git config user.email "${{ secrets.TOKEN_FOR_GIT }}"
           git status
-          git tag
-          git describe
+      - name: Deploy
+        run: |
+          git push origin --delete gh-pages &> /dev/null
+          git add dist && git commit -m "Initial dist subtree commit"
+          git subtree push --prefix dist origin gh-pages
